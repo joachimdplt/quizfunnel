@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Section } from "~/components/ui/Section";
 import { Button } from "~/components/ui/Button";
-import { ArrowRight, Rocket } from "lucide-react";
+import { ArrowRight, Rocket, Linkedin } from "lucide-react";
 
 export function Footer() {
     const [formData, setFormData] = useState({
@@ -76,8 +76,19 @@ export function Footer() {
 
                 {/* Footer Links */}
                 <div className="border-t border-slate-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <div className="text-2xl font-bold tracking-tight">
-                        Joachim Duplat
+                    <div className="flex flex-col gap-2">
+                        <div className="text-2xl font-bold tracking-tight">
+                            Joachim Duplat
+                        </div>
+                        <a
+                            href="https://www.linkedin.com/in/joachim-ewestudio/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm"
+                        >
+                            <Linkedin className="w-4 h-4" />
+                            LinkedIn
+                        </a>
                     </div>
 
                     <nav className="flex flex-wrap justify-center gap-8 text-sm font-medium text-slate-300">
