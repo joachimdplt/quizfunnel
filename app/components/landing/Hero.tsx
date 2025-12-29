@@ -37,7 +37,7 @@ export function Hero() {
                         <span className="whitespace-nowrap">
                             en{" "}
                             <span className="relative inline-block mx-2">
-                                <span className="relative z-10 px-4 py-1 rounded-xl bg-[#7104FF] text-white rotate-[-2deg] inline-block shadow-lg shadow-purple-500/30">
+                                <span className="relative z-10 px-4 py-1 rounded-xl bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white rotate-[-2deg] inline-block shadow-lg shadow-purple-500/30">
                                     Quiz
                                 </span>
                                 {/* Decorative Question Mark */}
@@ -51,7 +51,7 @@ export function Hero() {
                         <span className="whitespace-nowrap">
                             qui fait{" "}
                             <span className="relative inline-block mx-2">
-                                <span className="relative z-10 px-4 py-1 rounded-xl bg-[#7104FF] text-white rotate-[1deg] inline-block shadow-lg shadow-purple-500/30">
+                                <span className="relative z-10 px-4 py-1 rounded-xl bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white rotate-[1deg] inline-block shadow-lg shadow-purple-500/30">
                                     Exploser
                                 </span>
                                 {/* Decorative Chart Icon */}

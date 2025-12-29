@@ -15,7 +15,7 @@ import { Pricing } from "~/components/landing/Pricing";
 export function meta({ }: Route.MetaArgs) {
   return [
     { title: "Joachim Duplat - Transformez votre acquisition" },
-    { name: "description", content: "Expertise pragmatique pour entrepreneurs. Transformez votre site passif en conseiller interactif avec la méthode Q4C." },
+    { name: "description", content: "Expertise pragmatique pour entrepreneurs. Transformez votre site passif en conseiller interactif." },
   ];
 }
 

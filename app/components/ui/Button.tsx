@@ -18,11 +18,11 @@ export function Button({
     const baseStyles = "group inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-white gap-2";
 
     const variants = {
-        primary: "bg-[#7104FF] text-white shadow-lg shadow-purple-500/30 hover:bg-[#5b03cd] hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all duration-300",
-        secondary: "bg-white text-[#7104FF] border border-purple-100 hover:bg-purple-50 shadow-sm",
-        outline: "border-2 border-[#7104FF]/20 text-[#7104FF] hover:bg-purple-50 hover:border-[#7104FF]/50",
-        ghost: "text-[#7104FF] hover:bg-purple-50",
-        cta: "bg-[#7104FF] text-white shadow-lg shadow-purple-500/30 hover:bg-[#5b03cd] hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all duration-300",
+        primary: "bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all duration-300",
+        secondary: "bg-white text-[#6F00FF] border border-purple-100 hover:bg-purple-50 shadow-sm",
+        outline: "border-2 border-[#9C51FF]/20 text-[#9C51FF] hover:bg-purple-50 hover:border-[#6F00FF]/50",
+        ghost: "text-[#6F00FF] hover:bg-purple-50",
+        cta: "bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all duration-300",
     };
 
     const sizes = {

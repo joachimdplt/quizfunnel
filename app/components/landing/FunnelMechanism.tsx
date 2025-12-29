@@ -7,7 +7,7 @@ export function FunnelMechanism() {
             <div className="max-w-6xl mx-auto px-4 relative z-10">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-                        Qu'est-ce qu'un <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Quiz Funnel</span> ?
+                        Qu'est-ce qu'un <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C51FF] to-[#6F00FF]">Quiz Funnel</span> ?
                     </h2>
                     <p className="text-xl text-slate-400 max-w-3xl mx-auto">
                         Une machine à convertir qui transforme des inconnus en clients fidèles en 3 étapes simples.
@@ -17,11 +17,11 @@ export function FunnelMechanism() {
                 <div className="grid md:grid-cols-3 gap-12">
                     {/* Step 1 */}
                     <div className="relative group">
-                        <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold text-white shadow-xl z-20 transition-transform group-hover:scale-110">
+                        <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-[#9C51FF] to-[#6F00FF] rounded-2xl flex items-center justify-center text-2xl font-bold text-white shadow-xl z-20 transition-transform group-hover:scale-110">
                             1
                         </div>
                         <div className="bg-slate-900 border border-slate-800 rounded-[32px] p-8 pt-12 h-full hover:border-purple-500/50 transition-colors">
-                            <div className="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 text-purple-400">
+                            <div className="bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 text-[#9C51FF]">
                                 <MessageCircle className="w-7 h-7" />
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-4">Diagnostic</h3>

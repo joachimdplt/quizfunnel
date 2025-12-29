@@ -45,7 +45,7 @@ export function ProblemAgitation() {
 
                 <div className="relative">
                     <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800 shadow-2xl relative z-10">
-                        <div className="absolute -top-4 -right-4 bg-purple-600 text-white px-4 py-2 rounded-lg font-bold shadow-lg transform rotate-3">
+                        <div className="absolute -top-4 -right-4 bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white px-4 py-2 rounded-lg font-bold shadow-lg transform rotate-3">
                             La Solution
                         </div>
                         <h3 className="text-xl font-bold mb-4 text-white">Imaginez plutôt...</h3>
