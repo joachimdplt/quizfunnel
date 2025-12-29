@@ -1,85 +1,67 @@
 import { Section } from "~/components/ui/Section";
+import { Star, Quote } from "lucide-react";
 
 export function Testimonials() {
+    const testimonials = [
+        {
+            name: "Sophie M.",
+            role: "CEO, E-com Fashion",
+            content: "Depuis la mise en place du Quiz Funnel, notre taux de conversion a bondi de 1.8% à 4.2%. C'est juste incroyable. Le système qualifie automatiquement nos leads.",
+            image: "/images/client1.jpg" // Placeholder
+        },
+        {
+            name: "Thomas Dubois",
+            role: "Coach Business",
+            content: "Je passais mes journées au téléphone avec des prospects non qualifiés. Maintenant, je ne parle qu'à des gens prêts à acheter. Merci Joachim !",
+            image: "/images/client2.jpg" // Placeholder
+        },
+        {
+            name: "Marc L.",
+            role: "Agence Immobilière",
+            content: "Le design est top, l'intégration React est fluide. On sent que c'est du travail de pro. Retour sur investissement validé en 3 semaines.",
+            image: "/images/client3.jpg" // Placeholder
+        }
+    ];
+
     return (
-        <Section className="bg-slate-50">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                    Ils ont transformé leur business
+        <Section className="py-24 relative overflow-hidden" id="testimonials">
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-purple-900/10 to-transparent pointer-events-none"></div>
+
+            <div className="text-center max-w-4xl mx-auto mb-16 relative z-10 px-4">
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                    Ils ont choisi de <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">passer à l'action</span>
                 </h2>
-                <p className="text-lg text-slate-600">
-                    Rejoignez les entrepreneurs qui ont arrêté de courir après les leads.
+                <p className="text-xl text-slate-400">
+                    Découvrez les résultats obtenus par nos partenaires.
                 </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-24">
-                {[
-                    {
-                        quote: "J'ai doublé mon taux de conversion en 2 mois. Le quiz qualifie mes prospects avant même que je leur parle.",
-                        author: "Thomas L.",
-                        role: "Consultant SEO"
-                    },
-                    {
-                        quote: "Fini les appels avec des curieux. Je ne parle qu'à des prospects chauds qui connaissent déjà ma valeur.",
-                        author: "Sarah M.",
-                        role: "Coach Business"
-                    },
-                    {
-                        quote: "La mise en place a été ultra rapide. C'est la première fois qu'un système marketing me fait gagner du temps.",
-                        author: "Julien R.",
-                        role: "Formateur Immo"
-                    }
-                ].map((item, idx) => (
-                    <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                        <div className="text-accent text-4xl mb-4">"</div>
-                        <p className="text-slate-700 mb-6 italic">{item.quote}</p>
-                        <div>
-                            <div className="font-bold text-primary">{item.author}</div>
-                            <div className="text-sm text-slate-500">{item.role}</div>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 relative z-10">
+                {testimonials.map((t, i) => (
+                    <div key={i} className="bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-lg hover:border-slate-700 transition-colors flex flex-col relative group">
+                        <Quote className="absolute top-6 right-6 w-8 h-8 text-slate-800 group-hover:text-purple-900/50 transition-colors" />
+
+                        <div className="flex text-yellow-500 mb-6 gap-0.5">
+                            {[1, 2, 3, 4, 5].map((s) => (
+                                <Star key={s} className="w-5 h-5 fill-current" />
+                            ))}
+                        </div>
+
+                        <p className="text-slate-300 mb-8 flex-1 leading-relaxed">
+                            "{t.content}"
+                        </p>
+
+                        <div className="flex items-center gap-4 mt-auto">
+                            <div className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 overflow-hidden flex items-center justify-center shrink-0">
+                                <span className="text-slate-500 font-bold text-lg">{t.name[0]}</span>
+                            </div>
+                            <div>
+                                <div className="font-bold text-white">{t.name}</div>
+                                <div className="text-sm text-slate-500">{t.role}</div>
+                            </div>
                         </div>
                     </div>
                 ))}
-            </div>
-
-            <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-xl flex flex-col md:flex-row gap-12 items-center">
-                <div className="w-full md:w-1/3">
-                    {/* Placeholder for ProfilePic.png */}
-                    <div className="aspect-square bg-slate-200 rounded-2xl overflow-hidden relative">
-                        <img
-                            src="/images/ProfilePic.png"
-                            alt="Joachim Duplat"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                </div>
-                <div className="w-full md:w-2/3">
-                    <h3 className="text-2xl font-bold text-primary mb-4">
-                        Qui est Joachim Duplat ?
-                    </h3>
-                    <p className="text-slate-600 mb-4 leading-relaxed">
-                        Concepteur d'application web/mobile, j'aide les entreprises à structurer leur croissance sans s'épuiser.
-                    </p>
-                    <p className="text-slate-600 mb-6 leading-relaxed">
-                        Après avoir vu trop d'experts talentueux échouer à cause d'un marketing "site vitrine" dépassé, j'ai développé la méthode Q4C. Mon objectif : vous redonner le contrôle sur votre acquisition avec un système qui travaille pour vous, 24h/24.
-                    </p>
-                    <div className="flex gap-4">
-                        <div className="text-center">
-                            <div className="font-bold text-2xl text-primary">3+</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-wide">Années d'xp</div>
-                        </div>
-                        <div className="w-px bg-slate-200"></div>
-                        <div className="text-center">
-                            <div className="font-bold text-2xl text-primary">10+</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-wide">Clients accompagnés</div>
-                        </div>
-                        <div className="w-px bg-slate-200"></div>
-                          <div className="text-center">
-                            <div className="font-bold text-2xl text-primary">100%</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-wide">Satisfaction</div>
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </Section>
     );

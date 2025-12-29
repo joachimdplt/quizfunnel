@@ -6,6 +6,12 @@ import { Testimonials } from "~/components/landing/Testimonials";
 import { FAQ } from "~/components/landing/FAQ";
 import { Footer } from "~/components/landing/Footer";
 
+import { Navigation } from "~/components/landing/Navigation";
+
+import { FunnelMechanism } from "~/components/landing/FunnelMechanism";
+import { WhyChooseUs } from "~/components/landing/WhyChooseUs";
+import { Pricing } from "~/components/landing/Pricing";
+
 export function meta({ }: Route.MetaArgs) {
   return [
     { title: "Joachim Duplat - Transformez votre acquisition" },
@@ -15,11 +21,15 @@ export function meta({ }: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white selection:bg-accent/20 selection:text-accent">
+    <main className="min-h-screen">
+      <Navigation />
       <Hero />
+      <FunnelMechanism />
       <ProblemAgitation />
       <Solution />
-      <Testimonials />
+      <WhyChooseUs />
+      <Pricing />
+      {/* <Testimonials /> */}
       <FAQ />
       <Footer />
     </main>

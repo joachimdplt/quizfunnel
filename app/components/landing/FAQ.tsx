@@ -1,37 +1,89 @@
+import { useState } from "react";
 import { Section } from "~/components/ui/Section";
+import { Button } from "~/components/ui/Button";
+import { Plus, Minus } from "lucide-react";
 
 export function FAQ() {
     const faqs = [
         {
-            q: "Est-ce que le quiz n'est pas infantilisant pour mon audience pro ?",
-            a: "Au contraire. Un quiz bien conçu est perçu comme un outil de diagnostic expert. Il apporte de la valeur immédiate à vos prospects en les aidant à y voir plus clair sur leur situation."
+            q: "Quelle est votre garantie de satisfaction ?",
+            a: "Nous sommes confiants dans notre méthode. Si les résultats ne sont pas au rendez-vous après 90 jours d'optimisation (génération de leads qualifiés ou rentabilité), nous vous remboursons intégralement. C'est notre engagement envers votre succès."
         },
         {
-            q: "Et si ça n'augmente pas la conversion ?",
-            a: "Nous sommes confiants dans notre méthode. Si les résultats ne sont pas au rendez-vous après 90 jours d'optimisation, nous retravaillons votre funnel gratuitement."
+            q: "Que se passe-t-il à la fin des 3 mois ?",
+            a: "Après la phase initiale de 3 mois, nous analysons les performances ensemble. Vous pouvez choisir de continuer l'accompagnement pour optimiser davantage le funnel, de prendre le relais en interne, ou d'arrêter sans frais supplémentaires."
         },
         {
-            q: "Je n'ai pas le temps de produire le contenu.",
-            a: "C'est une offre 'Done For You'. Nous nous occupons de la stratégie, de la rédaction et de l'intégration. Vous validez, nous exécutons."
+            q: "Pour quels secteurs créez-vous des Quiz Funnels ?",
+            a: "Nous travaillons principalement avec des entreprises de services (B2B/B2C), des infopreneurs, des coachs et des agences qui ont besoin de qualifier leurs prospects avant un appel de vente."
         },
         {
-            q: "Est-ce compatible avec mon CRM actuel ?",
-            a: "Oui, nous connectons le système à la plupart des outils du marché (HubSpot, ActiveCampaign, MailerLite, etc.) via des intégrations natives ou Zapier/Make."
+            q: "À quoi sert l'appel ?",
+            a: "L'appel de diagnostic nous permet de comprendre votre business, vos objectifs et de vérifier si un Quiz Funnel est la meilleure solution pour vous. C'est une session de conseil stratégique, pas une simple démo."
+        },
+        {
+            q: "Quels sont vos délais de livraisons ?",
+            a: "Votre V1 (stratégie, quiz et landing page) est livrée sous 14 jours ouvrés. La version finale optimisée avec intégrations CRM complètes est livrée sous 21 jours."
         }
     ];
 
-    return (
-        <Section>
-            <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-bold text-primary mb-12 text-center">Questions Fréquentes</h2>
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-                <div className="space-y-6">
-                    {faqs.map((item, idx) => (
-                        <div key={idx} className="border-b border-slate-200 pb-6">
-                            <h3 className="text-lg font-bold text-primary mb-2">{item.q}</h3>
-                            <p className="text-slate-600">{item.a}</p>
-                        </div>
-                    ))}
+    const toggleAccordion = (idx: number) => {
+        setOpenIndex(openIndex === idx ? null : idx);
+    };
+
+    return (
+        <Section id="faq" className="py-24 md:py-32 relative overflow-hidden">
+            <div className="max-w-4xl mx-auto px-4 relative z-10 flex flex-col items-center">
+                <h2 className="text-5xl md:text-8xl font-bold text-white mb-10 text-center tracking-tighter">
+                    FAQ
+                </h2>
+
+                <div className="mb-16">
+                    <Button
+                        variant="cta"
+                        size="lg"
+                        className="rounded-full px-10 text-lg shadow-2xl"
+                        onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        Je veux mon système d'acquisition
+                    </Button>
+                </div>
+
+                <div className="w-full space-y-4">
+                    {faqs.map((item, idx) => {
+                        const isOpen = openIndex === idx;
+                        return (
+                            <div
+                                key={idx}
+                                className={`group bg-slate-900/40 border transition-all duration-300 rounded-[28px] overflow-hidden ${isOpen ? 'border-purple-500/50 bg-slate-900/80 shadow-lg shadow-purple-500/5' : 'border-slate-800'
+                                    }`}
+                            >
+                                <button
+                                    onClick={() => toggleAccordion(idx)}
+                                    className="w-full px-8 py-7 flex items-center justify-between text-left transition-colors"
+                                >
+                                    <h3 className={`text-lg md:text-xl font-bold transition-colors ${isOpen ? 'text-white' : 'text-slate-100'}`}>
+                                        {item.q}
+                                    </h3>
+                                    <div className={`flex-shrink-0 ml-4 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${isOpen ? 'border-purple-500 bg-purple-500 text-white' : 'border-slate-700 text-slate-400 group-hover:border-slate-600 group-hover:text-slate-200'
+                                        }`}>
+                                        {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                                    </div>
+                                </button>
+
+                                <div
+                                    className={`transition-all duration-300 ease-in-out px-8 ${isOpen ? 'max-h-96 pb-8 opacity-100' : 'max-h-0 opacity-0'
+                                        }`}
+                                >
+                                    <p className="text-slate-400 text-lg leading-relaxed max-w-2xl">
+                                        {item.a}
+                                    </p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </Section>

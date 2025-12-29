@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router";
-import { Check, ChevronLeft, Users, TrendingUp, Target, Zap, Layout, MessageSquare, BarChart3 } from "lucide-react";
+import { Check, ChevronLeft, Users, TrendingUp, Target, Zap, Layout, MessageSquare, BarChart3, Megaphone, Share2, Search, Activity, Layers } from "lucide-react";
 
 export function meta() {
     return [
@@ -16,11 +16,13 @@ export default function Quiz() {
     const [formData, setFormData] = useState({
         ...location.state, // Pre-fill from footer form if available
         activity: "",
+        trafficSource: "",
+        leadVolume: "",
         challenge: "",
         goal: "",
     });
 
-    const totalSteps = 4;
+    const totalSteps = 6;
 
     const handleNext = () => {
         if (step < totalSteps) {
@@ -45,13 +47,12 @@ export default function Quiz() {
             setTimeout(() => setStep(step + 1), 300);
         }
     };
-    const API_URL = "http://72.61.101.96:4000";
 
     const handleFinish = async () => {
         try {
             console.log("[QUIZ] Envoi du lead qualifié :", formData);
 
-            const res = await fetch(`${API_URL}/lead-quiz`, {
+            const res = await fetch(`/api/lead`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -135,8 +136,74 @@ export default function Quiz() {
                             </div>
                         )}
 
-                        {/* Step 2: Challenge */}
+                        {/* Step 2: Traffic Source */}
                         {step === 2 && (
+                            <div className="animate-in fade-in slide-in-from-right-8 duration-500">
+                                <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading text-center">
+                                    D'où vient votre trafic principal ?
+                                </h1>
+                                <p className="text-primary-200 text-center mb-8 text-lg">
+                                    Pour comprendre votre coût d'acquisition actuel.
+                                </p>
+
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <OptionCard
+                                        icon={Megaphone}
+                                        label="Publicité (Ads)"
+                                        selected={formData.trafficSource === "ads"}
+                                        onClick={() => updateField("trafficSource", "ads")}
+                                    />
+                                    <OptionCard
+                                        icon={Share2}
+                                        label="Réseaux Sociaux (Orga)"
+                                        selected={formData.trafficSource === "social"}
+                                        onClick={() => updateField("trafficSource", "social")}
+                                    />
+                                    <OptionCard
+                                        icon={Search}
+                                        label="SEO / Bouche à oreille"
+                                        selected={formData.trafficSource === "seo"}
+                                        onClick={() => updateField("trafficSource", "seo")}
+                                    />
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Step 3: Lead Volume */}
+                        {step === 3 && (
+                            <div className="animate-in fade-in slide-in-from-right-8 duration-500">
+                                <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading text-center">
+                                    Combien de prospects gérez-vous par mois ?
+                                </h1>
+                                <p className="text-primary-200 text-center mb-8 text-lg">
+                                    Pour dimensionner le système de qualification.
+                                </p>
+
+                                <div className="space-y-4">
+                                    <OptionRow
+                                        icon={Activity}
+                                        label="Moins de 10 leads (Démarrage)"
+                                        selected={formData.leadVolume === "low"}
+                                        onClick={() => updateField("leadVolume", "low")}
+                                    />
+                                    <OptionRow
+                                        icon={Layers}
+                                        label="10 à 50 leads (Croissance)"
+                                        selected={formData.leadVolume === "medium"}
+                                        onClick={() => updateField("leadVolume", "medium")}
+                                    />
+                                    <OptionRow
+                                        icon={Zap}
+                                        label="Plus de 50 leads (Scale)"
+                                        selected={formData.leadVolume === "high"}
+                                        onClick={() => updateField("leadVolume", "high")}
+                                    />
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Step 4: Challenge */}
+                        {step === 4 && (
                             <div className="animate-in fade-in slide-in-from-right-8 duration-500">
                                 <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading text-center">
                                     Quel est votre frein n°1 actuellement ?
@@ -168,8 +235,8 @@ export default function Quiz() {
                             </div>
                         )}
 
-                        {/* Step 3: Goal */}
-                        {step === 3 && (
+                        {/* Step 5: Goal */}
+                        {step === 5 && (
                             <div className="animate-in fade-in slide-in-from-right-8 duration-500">
                                 <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading text-center">
                                     Quel est votre objectif à 3 mois ?
@@ -195,8 +262,8 @@ export default function Quiz() {
                             </div>
                         )}
 
-                        {/* Step 4: Confirmation */}
-                        {step === 4 && (
+                        {/* Step 6: Confirmation */}
+                        {step === 6 && (
                             <div className="animate-in fade-in slide-in-from-right-8 duration-500 text-center">
                                 <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/30">
                                     <Check className="w-10 h-10 text-white" />
@@ -214,6 +281,14 @@ export default function Quiz() {
                                         <li className="flex items-center justify-between border-b border-primary-800 pb-2">
                                             <span className="text-primary-200">Profil</span>
                                             <span className="font-medium capitalize">{formData.activity === 'coach' ? 'Coach / Formateur' : formData.activity}</span>
+                                        </li>
+                                        <li className="flex items-center justify-between border-b border-primary-800 pb-2">
+                                            <span className="text-primary-200">Volume</span>
+                                            <span className="font-medium capitalize">
+                                                {formData.leadVolume === 'low' && '< 10 leads/mois'}
+                                                {formData.leadVolume === 'medium' && '10-50 leads/mois'}
+                                                {formData.leadVolume === 'high' && '50+ leads/mois'}
+                                            </span>
                                         </li>
                                         <li className="flex items-center justify-between border-b border-primary-800 pb-2">
                                             <span className="text-primary-200">Priorité</span>

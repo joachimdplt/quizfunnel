@@ -1,106 +1,117 @@
+import { useEffect, useRef } from "react";
 import { Section } from "~/components/ui/Section";
 import { Button } from "~/components/ui/Button";
 
 export function Solution() {
+    const headerRef = useRef<HTMLDivElement>(null);
+    const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('reveal-hidden');
+                    entry.target.classList.add('reveal-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        if (headerRef.current) observer.observe(headerRef.current);
+        stepsRef.current.forEach((step) => {
+            if (step) observer.observe(step);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     const steps = [
         {
             step: "01",
-            title: "Quiz Funnel",
-            desc: "Conception et intégration d'un quiz interactif qui engage et segmente vos visiteurs."
+            title: "Appel de Cadrage Stratégique",
+            desc: "Nous analysons en profondeur votre business, votre offre et votre cible pour définir l'angle d'attaque précis."
         },
         {
             step: "02",
-            title: "Classification",
-            desc: "Scoring automatique pour identifier les prospects chauds et les séparer des curieux."
+            title: "Profilage Avatar & Psychologie",
+            desc: "Recherche avancée pour modéliser votre client idéal et créer un ciblage chirurgical."
         },
         {
             step: "03",
-            title: "Conversion",
-            desc: "Pages de résultats dynamiques et séquences emails personnalisées selon le profil."
+            title: "Architecture & Déploiement",
+            desc: "Lancement de votre V1 sous 14 jours. Puis intégration CRM, e-mails de vente et livraison finale sous 21 jours."
         },
         {
             step: "04",
-            title: "Compounding",
-            desc: "Optimisation continue via dashboards et A/B testing pour maximiser le ROI."
+            title: "Optimisation Continue (90 Jours)",
+            desc: "Nous analysons les datas et itérons chaque semaine pour maximiser votre retour sur investissement."
         }
     ];
 
     return (
-        <Section>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
-                    La Méthode <span className="text-accent">Q4C</span>
+        <Section className="py-24 relative" id="solution">
+            {/* Timeline Line */}
+            <div className="absolute left-[34px] md:left-1/2 top-0 bottom-0 w-[2px] bg-slate-800 md:-translate-x-1/2 hidden md:block opacity-50"></div>
+
+            <div
+                ref={headerRef}
+                className="text-center max-w-4xl mx-auto mb-20 relative z-10 px-4 reveal-hidden"
+            >
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-800 bg-slate-900/50 backdrop-blur-sm text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-6">
+                    MÉTHODOLOGIE
+                </div>
+                <h2 className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                    Comment ça marche ?
                 </h2>
-                <p className="text-xl text-slate-600">
-                    Une approche complète "Done For You" pour transformer votre acquisition.
-                    Nous ne vous livrons pas juste un outil, mais un système de vente complet.
+                <p className="text-xl text-slate-400">
+                    Un processus rodé pour déployer votre machine à leads.
                 </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8 mb-16">
-                {steps.map((item, idx) => (
-                    <div key={idx} className="relative p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                        <div className="text-6xl font-bold text-slate-100 absolute top-4 right-4 select-none">
-                            {item.step}
+            <div className="max-w-6xl mx-auto px-4 relative z-10 space-y-16 md:space-y-32">
+                {steps.map((item, index) => (
+                    <div
+                        key={index}
+                        ref={(el) => { stepsRef.current[index] = el; }}
+                        className={`flex flex-col md:flex-row items-center gap-12 md:gap-24 reveal-hidden transition-all ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+                        style={{ transitionDelay: `${index * 150}ms` }}
+                    >
+                        {/* Step Bubble */}
+                        <div className="w-16 h-16 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center z-20 shrink-0 shadow-2xl relative md:absolute md:left-1/2 md:-translate-x-1/2">
+                            <div className="absolute inset-0 bg-purple-600/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <span className="text-xl font-bold text-white relative z-10">{item.step}</span>
                         </div>
-                        <div className="relative z-10">
-                            <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
-                            <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+
+                        {/* Content Card */}
+                        <div className="w-full md:w-1/2">
+                            <div className={`p-8 rounded-[32px] bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all group ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{item.title}</h3>
+                                <p className="text-slate-400 leading-relaxed">
+                                    {item.desc}
+                                </p>
+                            </div>
                         </div>
+                        {/* Empty Space */}
+                        <div className="hidden md:block w-1/2" />
                     </div>
                 ))}
             </div>
 
-            <div className="bg-brand-gradient rounded-3xl p-8 md:p-12 text-white overflow-hidden relative">
-                <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 className="text-3xl font-bold mb-6">Offre "Done For You"</h3>
-                        <ul className="space-y-4 mb-8">
-                            <li className="flex items-start gap-3">
-                                <span className="text-white/80 mt-1">✦</span>
-                                <span><strong>Landing Page Conversion-First</strong> : Copywriting, Design & Intégration</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-white/80 mt-1">✦</span>
-                                <span><strong>Quiz Funnel Complet</strong> : Logique de saut, Scoring & Segmentation</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-white/80 mt-1">✦</span>
-                                <span><strong>Tech & RGPD</strong> : Connexion CRM, Tracking & Conformité</span>
-                            </li>
-                        </ul>
-                        <Button
-                            size="lg"
-                            className="w-full md:w-auto font-bold"
-                            >
-                            Je veux mon système d'acquisition
-                            </Button>
-                    </div>
-                    <div className="bg-white/10 p-6 rounded-xl backdrop-blur-md border border-white/20">
-                        <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
-                            <span className="font-mono text-sm text-purple-200">DASHBOARD</span>
-                            <span className="inline-flex items-center px-2 py-1 rounded bg-green-500/20 text-green-300 text-xs border border-green-500/30">
-                                ● LIVE
-                            </span>
-                        </div>
-                        <div className="space-y-4">
-                            <div className="flex justify-between items-end">
-                                <span className="text-purple-200 text-sm">Taux de conversion</span>
-                                <span className="text-3xl font-bold">12.4%</span>
-                            </div>
-                            <div className="w-full bg-black/20 h-2 rounded-full overflow-hidden">
-                                <div className="bg-accent h-full w-[75%] shadow-[0_0_10px_rgba(113,4,255,0.5)]"></div>
-                            </div>
-                            <div className="flex justify-between items-end pt-2">
-                                <span className="text-purple-200 text-sm">Coût par Lead (CPL)</span>
-                                <span className="text-xl font-bold text-green-300">-45%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Background gradients */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div className="text-center mt-24 relative z-10">
+                <Button
+                    size="lg"
+                    variant="cta"
+                    className="h-14 px-8 text-lg"
+                    onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                    Je veux mon système d'acquisition
+                </Button>
             </div>
         </Section>
     );
