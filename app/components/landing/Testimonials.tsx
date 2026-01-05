@@ -28,18 +28,18 @@ export function Testimonials() {
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-purple-900/10 to-transparent pointer-events-none"></div>
 
             <div className="text-center max-w-4xl mx-auto mb-16 relative z-10 px-4">
-                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                     Ils ont choisi de <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">passer à l'action</span>
                 </h2>
-                <p className="text-xl text-slate-400">
+                <p className="text-xl text-muted-foreground">
                     Découvrez les résultats obtenus par nos partenaires.
                 </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 relative z-10">
                 {testimonials.map((t, i) => (
-                    <div key={i} className="bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-lg hover:border-slate-700 transition-colors flex flex-col relative group">
-                        <Quote className="absolute top-6 right-6 w-8 h-8 text-slate-800 group-hover:text-purple-900/50 transition-colors" />
+                    <div key={i} className="bg-muted p-8 rounded-3xl border border-border shadow-lg hover:border-border/80 transition-colors flex flex-col relative group">
+                        <Quote className="absolute top-6 right-6 w-8 h-8 text-border group-hover:text-purple-900/50 transition-colors" />
 
                         <div className="flex text-yellow-500 mb-6 gap-0.5">
                             {[1, 2, 3, 4, 5].map((s) => (
@@ -47,17 +47,17 @@ export function Testimonials() {
                             ))}
                         </div>
 
-                        <p className="text-slate-300 mb-8 flex-1 leading-relaxed">
+                        <p className="text-foreground/80 mb-8 flex-1 leading-relaxed">
                             "{t.content}"
                         </p>
 
                         <div className="flex items-center gap-4 mt-auto">
-                            <div className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 overflow-hidden flex items-center justify-center shrink-0">
-                                <span className="text-slate-500 font-bold text-lg">{t.name[0]}</span>
+                            <div className="w-12 h-12 rounded-full bg-background border-2 border-border overflow-hidden flex items-center justify-center shrink-0">
+                                <span className="text-muted-foreground font-bold text-lg">{t.name[0]}</span>
                             </div>
                             <div>
-                                <div className="font-bold text-white">{t.name}</div>
-                                <div className="text-sm text-slate-500">{t.role}</div>
+                                <div className="font-bold text-foreground">{t.name}</div>
+                                <div className="text-sm text-muted-foreground">{t.role}</div>
                             </div>
                         </div>
                     </div>

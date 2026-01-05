@@ -19,9 +19,9 @@ export function Button({
 
     const variants = {
         primary: "bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all duration-300",
-        secondary: "bg-white text-[#6F00FF] border border-purple-100 hover:bg-purple-50 shadow-sm",
-        outline: "border-2 border-[#9C51FF]/20 text-[#9C51FF] hover:bg-purple-50 hover:border-[#6F00FF]/50",
-        ghost: "text-[#6F00FF] hover:bg-purple-50",
+        secondary: "bg-secondary text-secondary-foreground border border-border hover:bg-secondary/80 shadow-sm",
+        outline: "border-2 border-[#9C51FF]/20 text-[#9C51FF] hover:bg-purple-500/5 hover:border-[#6F00FF]/50",
+        ghost: "text-[#6F00FF] hover:bg-purple-500/5",
         cta: "bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all duration-300",
     };
 

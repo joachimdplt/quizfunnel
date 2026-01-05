@@ -45,23 +45,23 @@ export function Footer() {
     };
 
     return (
-        <Section id="footer" className="bg-transparent py-20 text-white overflow-hidden relative">
+        <Section id="footer" className="bg-transparent py-20 text-foreground overflow-hidden relative">
             <div className="relative z-10 container mx-auto px-4">
                 {/* CTA Section */}
                 <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-20 md:mb-32">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-700 bg-slate-900/50 backdrop-blur-sm text-xs font-medium text-slate-300 mb-8">
-                        <Rocket className="w-3 h-3 text-white" />
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-muted/50 backdrop-blur-sm text-xs font-medium text-muted-foreground mb-8">
+                        <Rocket className="w-3 h-3 text-foreground" />
                         VOTRE LANDING PAGE EST MUETTE ?
                     </div>
 
-                    <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tight">
+                    <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tight text-foreground">
                         Générez des leads ultra-qualifiés avec un <span className="text-primary">Quiz Funnel Intelligent</span>
                     </h2>
 
-                    <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                        Votre V1 livrée sous <span className="text-white font-bold">14 jours</span>.
+                    <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                        Votre V1 livrée sous <span className="text-foreground font-bold">14 jours</span>.
                         <br />
-                        Livraison finale optimisée sous <span className="text-white font-bold">21 jours</span>.
+                        Livraison finale optimisée sous <span className="text-foreground font-bold">21 jours</span>.
                     </p>
 
                     <Button
@@ -75,35 +75,35 @@ export function Footer() {
                 </div>
 
                 {/* Footer Links */}
-                <div className="border-t border-slate-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div className="border-t border-border pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="flex flex-col gap-2">
-                        <div className="text-2xl font-bold tracking-tight">
+                        <div className="text-2xl font-bold tracking-tight text-foreground">
                             Joachim Duplat
                         </div>
                         <a
                             href="https://www.linkedin.com/in/joachim-ewestudio/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm"
+                            className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 text-sm"
                         >
                             <Linkedin className="w-4 h-4" />
                             LinkedIn
                         </a>
                     </div>
 
-                    <nav className="flex flex-wrap justify-center gap-8 text-sm font-medium text-slate-300">
-                        <a href="#solution" className="hover:text-white transition-colors">Comment ça marche ?</a>
-                        <a href="#pricing" className="hover:text-white transition-colors">Offres</a>
-                        <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+                    <nav className="flex flex-wrap justify-center gap-8 text-sm font-medium text-muted-foreground">
+                        <a href="#solution" className="hover:text-foreground transition-colors">Comment ça marche ?</a>
+                        <a href="#pricing" className="hover:text-foreground transition-colors">Offres</a>
+                        <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
                     </nav>
                 </div>
 
-                <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground/60">
                     <p>© {new Date().getFullYear()} Joachim Duplat. Tous droits réservés.</p>
                     <div className="flex gap-6">
-                        <a href="#" className="hover:text-slate-300 transition-colors">Politique de Confidentialité</a>
-                        <a href="#" className="hover:text-slate-300 transition-colors">Mentions Légales</a>
-                        <a href="#" className="hover:text-slate-300 transition-colors">Politique de Cookies</a>
+                        <a href="#" className="hover:text-muted-foreground transition-colors">Politique de Confidentialité</a>
+                        <a href="#" className="hover:text-muted-foreground transition-colors">Mentions Légales</a>
+                        <a href="#" className="hover:text-muted-foreground transition-colors">Politique de Cookies</a>
                     </div>
 
                 </div>

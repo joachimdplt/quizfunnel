@@ -36,7 +36,7 @@ export function FAQ() {
     return (
         <Section id="faq" className="py-24 md:py-32 relative overflow-hidden">
             <div className="max-w-4xl mx-auto px-4 relative z-10 flex flex-col items-center">
-                <h2 className="text-5xl md:text-8xl font-bold text-white mb-10 text-center tracking-tighter">
+                <h2 className="text-5xl md:text-8xl font-bold text-foreground mb-10 text-center tracking-tighter">
                     FAQ
                 </h2>
 
@@ -57,17 +57,17 @@ export function FAQ() {
                         return (
                             <div
                                 key={idx}
-                                className={`group bg-slate-900/40 border transition-all duration-300 rounded-[28px] overflow-hidden ${isOpen ? 'border-purple-500/50 bg-slate-900/80 shadow-lg shadow-purple-500/5' : 'border-slate-800'
+                                className={`group bg-muted/40 border transition-all duration-300 rounded-[28px] overflow-hidden ${isOpen ? 'border-purple-500/50 bg-muted/80 shadow-lg shadow-purple-500/5' : 'border-border'
                                     }`}
                             >
                                 <button
                                     onClick={() => toggleAccordion(idx)}
                                     className="w-full px-8 py-7 flex items-center justify-between text-left transition-colors"
                                 >
-                                    <h3 className={`text-lg md:text-xl font-bold transition-colors ${isOpen ? 'text-white' : 'text-slate-100'}`}>
+                                    <h3 className={`text-lg md:text-xl font-bold transition-colors ${isOpen ? 'text-foreground' : 'text-foreground/90'}`}>
                                         {item.q}
                                     </h3>
-                                    <div className={`flex-shrink-0 ml-4 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${isOpen ? 'border-purple-500 bg-purple-500 text-white' : 'border-slate-700 text-slate-400 group-hover:border-slate-600 group-hover:text-slate-200'
+                                    <div className={`flex-shrink-0 ml-4 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${isOpen ? 'border-purple-500 bg-purple-500 text-white' : 'border-border text-muted-foreground group-hover:border-border/80 group-hover:text-foreground'
                                         }`}>
                                         {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                                     </div>
@@ -77,7 +77,7 @@ export function FAQ() {
                                     className={`transition-all duration-300 ease-in-out px-8 ${isOpen ? 'max-h-96 pb-8 opacity-100' : 'max-h-0 opacity-0'
                                         }`}
                                 >
-                                    <p className="text-slate-400 text-lg leading-relaxed max-w-2xl">
+                                    <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
                                         {item.a}
                                     </p>
                                 </div>

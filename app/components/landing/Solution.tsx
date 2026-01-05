@@ -57,19 +57,19 @@ export function Solution() {
     return (
         <Section className="py-24 relative" id="solution">
             {/* Timeline Line */}
-            <div className="absolute left-[34px] md:left-1/2 top-0 bottom-0 w-[2px] bg-slate-800 md:-translate-x-1/2 hidden md:block opacity-50"></div>
+            <div className="absolute left-[34px] md:left-1/2 top-0 bottom-0 w-[2px] bg-border md:-translate-x-1/2 hidden md:block opacity-50"></div>
 
             <div
                 ref={headerRef}
                 className="text-center max-w-4xl mx-auto mb-20 relative z-10 px-4 reveal-hidden"
             >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-800 bg-slate-900/50 backdrop-blur-sm text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-muted/50 backdrop-blur-sm text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-6">
                     MÉTHODOLOGIE
                 </div>
-                <h2 className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                <h2 className="text-4xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
                     Comment ça marche ?
                 </h2>
-                <p className="text-xl text-slate-400">
+                <p className="text-xl text-muted-foreground">
                     Un processus rodé pour déployer votre machine à leads.
                 </p>
             </div>
@@ -83,16 +83,16 @@ export function Solution() {
                         style={{ transitionDelay: `${index * 150}ms` }}
                     >
                         {/* Step Bubble */}
-                        <div className="w-16 h-16 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center z-20 shrink-0 shadow-2xl relative md:absolute md:left-1/2 md:-translate-x-1/2">
+                        <div className="w-16 h-16 rounded-2xl bg-muted border border-border flex items-center justify-center z-20 shrink-0 shadow-2xl relative md:absolute md:left-1/2 md:-translate-x-1/2">
                             <div className="absolute inset-0 bg-purple-600/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                            <span className="text-xl font-bold text-white relative z-10">{item.step}</span>
+                            <span className="text-xl font-bold text-foreground relative z-10">{item.step}</span>
                         </div>
 
                         {/* Content Card */}
                         <div className="w-full md:w-1/2">
-                            <div className={`p-8 rounded-[32px] bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all group ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{item.title}</h3>
-                                <p className="text-slate-400 leading-relaxed">
+                            <div className={`p-8 rounded-[32px] bg-muted/50 border border-border hover:border-border/80 transition-all group ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-purple-400 transition-colors">{item.title}</h3>
+                                <p className="text-muted-foreground leading-relaxed">
                                     {item.desc}
                                 </p>
                             </div>
