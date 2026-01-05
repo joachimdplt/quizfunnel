@@ -12,10 +12,10 @@ export function Pricing() {
         <Section className="py-24" id="pricing">
             <div className="text-center max-w-4xl mx-auto mb-16 px-4">
                 <h2 className="text-4xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
-                    Prêt à Exploser ton <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Taux de Conversion</span> ?
+                    Prêt à <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Digitaliser votre Activité</span> ?
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                    Choisis la solution adaptée à ton stade de croissance.
+                    Choisissez l'offre adaptée à vos goulots d'étranglement.
                 </p>
             </div>
 
@@ -24,22 +24,22 @@ export function Pricing() {
                 <div className="bg-muted/50 backdrop-blur-md p-8 rounded-3xl border border-border shadow-xl hover:border-border/80 transition-all flex flex-col relative group">
                     <div className="mb-8">
                         <div className="text-purple-300 font-bold mb-2 text-sm uppercase tracking-wider">Niveau Agile</div>
-                        <h3 className="text-3xl font-bold text-foreground mb-2">No-Code (Tally)</h3>
+                        <h3 className="text-3xl font-bold text-foreground mb-2">MVP Opérationnel</h3>
                         <p className="text-muted-foreground text-sm mb-8">
-                            Intégration Tally/Typeform pour un lancement rapide et économique.
+                            Une application ciblée sur un seul problème majeur (ex: rapports de chantier).
                         </p>
                         <Button
                             variant="outline"
                             className="w-full justify-center border-border text-foreground hover:bg-muted"
                             onClick={handleCTA}
                         >
-                            Je veux mon système d'acquisition
+                            Prendre rendez-vous
                         </Button>
                         <div className="mt-8 p-4 bg-background/50 rounded-xl border border-border">
                             <div className="font-bold text-foreground text-sm mb-1 text-left flex items-center gap-2">
-                                <span className="text-green-400">✦</span> Inclus : Le Moteur
+                                <span className="text-green-400">✦</span> Inclus : L'Essentiel
                             </div>
-                            <p className="text-xs text-muted-foreground text-left">Connexions API, CRM et Tracking avancés.</p>
+                            <p className="text-xs text-muted-foreground text-left">Saisie mobile, stockage Cloud et PDF auto.</p>
                         </div>
                     </div>
 
@@ -47,13 +47,13 @@ export function Pricing() {
                         <div className="text-sm font-bold text-foreground">Tout inclus :</div>
                         <ul className="space-y-4">
                             {[
-                                "Analyse détaillée de l'avatar client",
-                                "Quiz Funnel (Intégration No-Code)",
-                                "Page d'Opt-in optimisée",
-                                "1 à 3 pages de résultats personnalisées",
-                                "1 à 3 séquences d'e-mails de vente",
-                                "Analyse et optimisation sur 2 mois",
-                                "V1 livrée sous 14 jours"
+                                "Audit de votre processus actuel",
+                                "Design UX orienté efficacité terrain",
+                                "Base de données sécurisée",
+                                "Mode Hors-ligne (selon besoins)",
+                                "Génération automatique de documents",
+                                "Maintenance & Support sur 2 mois",
+                                "V1 livrée sous 21 jours"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-foreground/80">
                                     <Check className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
@@ -71,27 +71,24 @@ export function Pricing() {
                         Recommandé
                     </div>
 
-                    {/* Background Gradient */}
-                    <div className="absolute inset-0 r dark:from-purple-900/30 dark:to-transparent pointer-events-none"></div>
-
                     <div className="mb-8 relative z-10">
                         <div className="text-primary dark:text-purple-500 font-bold mb-2 text-sm uppercase tracking-wider">Niveau Premium</div>
-                        <h3 className="text-3xl font-bold text-foreground mb-2">Code (React)</h3>
+                        <h3 className="text-3xl font-bold text-foreground mb-2">Écosystème Métier</h3>
                         <p className="text-muted-foreground text-sm mb-8">
-                            Front-end React sur-mesure pour une identité de marque sans compromis.
+                            Votre cockpit complet pour piloter toute votre activité en temps réel.
                         </p>
                         <Button
                             variant="cta"
                             className="w-full justify-center shadow-xl"
                             onClick={handleCTA}
                         >
-                            Je veux mon système d'acquisition
+                            Je veux mon cockpit complet
                         </Button>
                         <div className="mt-8 p-4 bg-background/50 rounded-xl border border-border">
                             <div className="font-bold text-foreground text-sm mb-1 text-left flex items-center gap-2">
-                                <span className="text-green-400">✦</span> Inclus : Le Moteur
+                                <span className="text-green-400">✦</span> Inclus : La Puissance
                             </div>
-                            <p className="text-xs text-muted-foreground text-left">Connexions API, CRM et Tracking avancés.</p>
+                            <p className="text-xs text-muted-foreground text-left">Dashboards, Multi-rôles et Automatisation.</p>
                         </div>
                     </div>
 
@@ -99,15 +96,15 @@ export function Pricing() {
                         <div className="text-sm font-bold text-foreground">Tout inclus :</div>
                         <ul className="space-y-4">
                             {[
-                                "Analyse détaillée de l'avatar client",
-                                "Landing page haute conversion",
-                                "Quiz Funnel (Dev React/Next.js)",
-                                "Page d'Opt-in optimisée",
-                                "1 à 3 pages de résultats personnalisées",
-                                "1 à 3 séquences d'e-mails de vente",
-                                "V1 sous 14j & Finale sous 21j",
-                                "Analyse et optimisation sur 3 mois",
-                                "Design & UX Sur-mesure (Figma)"
+                                "Audit complet de l'organisation",
+                                "Dashboard administrateur temps réel",
+                                "Application mobile pour les équipes",
+                                "Système de notifications & alertes",
+                                "Connexion avec vos outils (CRM, Compta)",
+                                "Multi-accès sécurisés (Rôles & Permissions)",
+                                "Accompagnement startup (3 mois)",
+                                "Design & UX Sur-mesure (Figma)",
+                                "Formation de vos équipes à l'outil"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-foreground/80">
                                     <Check className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
@@ -124,14 +121,14 @@ export function Pricing() {
                 <div className="bg-muted/40 rounded-3xl p-8 border border-border text-center">
                     <h3 className="text-xl font-bold text-foreground mb-4">Besoin d'aide pour choisir ?</h3>
                     <p className="text-muted-foreground mb-6">
-                        Lors de notre appel, nous définirons ensemble la meilleure infrastructure pour tes objectifs.
+                        Lors de notre appel, nous définirons ensemble la meilleure infrastructure pour vos objectifs.
                     </p>
                     <Button
                         variant="ghost"
                         className="text-muted-foreground hover:text-foreground"
                         onClick={handleCTA}
                     >
-                        Je veux mon système d'acquisition
+                        Prendre rendez-vous
                     </Button>
                 </div>
             </div>

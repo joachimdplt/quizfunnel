@@ -11,24 +11,24 @@ export function FAQ() {
 
     const faqs = [
         {
-            q: "Quelle est ta garantie de satisfaction ?",
-            a: "Je suis confiant dans ma méthode. Si les résultats ne sont pas au rendez-vous après 90 jours d'optimisation (génération de leads qualifiés ou rentabilité), je te rembourse intégralement. C'est mon engagement envers ton succès."
+            q: "Pourquoi choisir du sur-mesure plutôt qu'un logiciel existant ?",
+            a: "Les logiciels standards vous imposent leur manière de travailler. Une application sur-mesure s'adapte à votre métier, automatise vos goulots d'étranglement et devient un actif propriétaire de votre entreprise."
         },
         {
-            q: "Que se passe-t-il à la fin des 3 mois ?",
-            a: "Après la phase initiale de 3 mois, nous analysons les performances ensemble. Tu peux choisir de continuer l'accompagnement pour optimiser davantage le funnel, de prendre le relais en interne, ou d'arrêter sans frais supplémentaires."
+            q: "Quelles technologies utilises-tu ?",
+            a: "J'utilise un mix de No-Code (pour la rapidité et la flexibilité) et de Code (React/Node.js pour la puissance et l'évolutivité). Cela me permet de livrer des outils performants en un temps record."
         },
         {
-            q: "Pour quels secteurs créez-vous des Quiz Funnels ?",
-            a: "Je travaille principalement avec des entreprises de services (B2B/B2C), des infopreneurs, des coachs et des agences qui ont besoin de qualifier leurs prospects avant un appel de vente."
+            q: "L'application est-elle évolutive ?",
+            a: "Absolument. On commence par un MVP pour résoudre l'urgence, mais l'architecture est pensée pour grandir avec votre business et accueillir de nouvelles fonctionnalités selon vos besoins."
         },
         {
-            q: "À quoi sert l'appel ?",
-            a: "L'appel de diagnostic nous permet de comprendre ton business, tes objectifs et de vérifier si un Quiz Funnel est la meilleure solution pour toi. C'est une session de conseil stratégique, pas une simple démo."
+            q: "Où sont stockées mes données ?",
+            a: "Vos données sont stockées sur des serveurs sécurisés et souverains. Vous en êtes l'unique propriétaire et elles sont accessibles en temps réel par vos équipes autorisées."
         },
         {
-            q: "Quels sont tes délais de livraisons ?",
-            a: "Ta V1 (stratégie, quiz et landing page) est livrée sous 14 jours ouvrés. La version finale optimisée avec intégrations CRM complètes est livrée sous 21 jours."
+            q: "Combien de temps faut-il pour voir les premiers résultats ?",
+            a: "Votre V1 est opérationnelle sous 21 jours. Dès le premier jour de déploiement, vous éliminez les doubles saisies et les pertes d'informations, ce qui se traduit immédiatement par un gain de temps pour vos équipes."
         }
     ];
 
@@ -52,7 +52,7 @@ export function FAQ() {
                         className="rounded-full px-10 text-lg shadow-2xl"
                         onClick={handleCTA}
                     >
-                        Je veux mon système d'acquisition
+                        Prendre rendez-vous
                     </Button>
                 </div>
 

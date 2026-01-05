@@ -7,10 +7,10 @@ export function FunnelMechanism() {
             <div className="max-w-6xl mx-auto px-4 relative z-10">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
-                        Qu'est-ce qu'un <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C51FF] to-[#6F00FF]">Quiz Funnel</span> ?
+                        Votre organisation <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C51FF] to-[#6F00FF]">passée au crible</span>
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Un formulaire qui permet de segmenter tes prospects à travers tes critères.
+                        On ne crée pas une app pour le plaisir du code, mais pour supprimer vos goulots d'étranglement.
                     </p>
                 </div>
 
@@ -24,13 +24,13 @@ export function FunnelMechanism() {
                             <div className="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 text-[#9C51FF]">
                                 <MessageCircle className="w-7 h-7" />
                             </div>
-                            <h3 className="text-2xl font-bold text-foreground mb-4">Diagnostic</h3>
+                            <h3 className="text-2xl font-bold text-foreground mb-4">Audit Opérationnel</h3>
                             <p className="text-muted-foreground leading-relaxed mb-6">
-                                Au lieu de vendre directement, tu poses des questions pertinentes pour comprendre le besoin réel de ton prospect.
+                                J'analyse votre flux de travail actuel pour identifier l'endroit exact où vous perdez de l'argent et du temps.
                             </p>
                             <div className="bg-background/50 rounded-2xl p-4 border border-border">
-                                <p className="text-xs text-muted-foreground uppercase font-bold mb-2">Exemple</p>
-                                <p className="text-sm text-foreground/80 italic">"Quel est ton plus grand défi actuel avec ton trafic ?"</p>
+                                <p className="text-xs text-muted-foreground uppercase font-bold mb-2">Objectif</p>
+                                <p className="text-sm text-foreground/80 italic">"Supprimer les étapes manuelles inutiles."</p>
                             </div>
                         </div>
                         <ArrowRight className="absolute -right-6 top-1/2 -translate-y-1/2 text-border hidden md:block w-8 h-8" />
@@ -45,13 +45,13 @@ export function FunnelMechanism() {
                             <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-blue-400">
                                 <Database className="w-7 h-7" />
                             </div>
-                            <h3 className="text-2xl font-bold text-foreground mb-4">Capture</h3>
+                            <h3 className="text-2xl font-bold text-foreground mb-4">Prototype & MVP</h3>
                             <p className="text-muted-foreground leading-relaxed mb-6">
-                                En échange du diagnostic personnalisé, le prospect te donne ses coordonnées qualifiées.
+                                Développement d'une première version fonctionnelle en 21 jours pour vos premières équipes tests.
                             </p>
                             <div className="bg-background/50 rounded-2xl p-4 border border-border">
-                                <p className="text-xs text-muted-foreground uppercase font-bold mb-2">Résultat</p>
-                                <p className="text-sm text-foreground/80 italic">+40% de taux d'opt-in par rapport à une landing classique.</p>
+                                <p className="text-xs text-muted-foreground uppercase font-bold mb-2">Vitesse</p>
+                                <p className="text-sm text-foreground/80 italic">Opérationnel sur le terrain en un temps record.</p>
                             </div>
                         </div>
                         <ArrowRight className="absolute -right-6 top-1/2 -translate-y-1/2 text-border hidden md:block w-8 h-8" />
@@ -66,13 +66,13 @@ export function FunnelMechanism() {
                             <div className="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 text-green-400">
                                 <Gift className="w-7 h-7" />
                             </div>
-                            <h3 className="text-2xl font-bold text-foreground mb-4">Conversion</h3>
+                            <h3 className="text-2xl font-bold text-foreground mb-4">Pilotage Temps Réel</h3>
                             <p className="text-muted-foreground leading-relaxed mb-6">
-                                Tu rediriges le prospect vers l'offre exacte qui correspond à son besoin (ou un appel commercial préparé).
+                                Votre application centralise toutes les données. Vous pilotez votre activité avec des chiffres clairs, partout.
                             </p>
                             <div className="bg-background/50 rounded-2xl p-4 border border-border">
                                 <p className="text-xs text-muted-foreground uppercase font-bold mb-2">Impact</p>
-                                <p className="text-sm text-foreground/80 italic">Des appels avec des prospects éduqués et prêts à passer à l'action.</p>
+                                <p className="text-sm text-foreground/80 italic">Contrôle total de votre rentabilité et de vos chantiers.</p>
                             </div>
                         </div>
                     </div>

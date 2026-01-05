@@ -70,7 +70,7 @@ export function Navigation() {
                                     className="rounded-full px-8 text-base shadow-lg"
                                     onClick={handleCTA}
                                 >
-                                    Réserver
+                                    Rendez-vous gratuit
                                 </Button>
                             </div>
                         </div>
@@ -119,7 +119,7 @@ export function Navigation() {
                                     className="rounded-full px-8 py-5 text-sm shadow-xl"
                                     onClick={handleCTA}
                                 >
-                                    Je veux mon système
+                                    Prendre rendez-vous
                                 </Button>
                                 <div className="flex items-center gap-2 text-muted-foreground font-bold px-4 text-[9px] tracking-widest uppercase">
                                     <div className="w-1 h-1 rounded-full bg-green-500/50"></div>

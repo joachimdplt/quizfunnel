@@ -5,18 +5,18 @@ export function ProblemAgitation() {
     const frustrations = [
         {
             icon: <TrendingDown className="w-6 h-6 text-red-500" />,
-            title: "Site vitrine muet",
-            desc: "Un joli site qui ne convertit pas et ne capture aucune donnée qualifiée."
+            title: "Enfer des Tableaux Excel",
+            desc: "Des fichiers trop complexes, impossibles à partager en temps réel et sources d'erreurs humaines."
         },
         {
             icon: <Activity className="w-6 h-6 text-red-500" />,
-            title: "Leads non qualifiés",
-            desc: "Ton calendrier se remplit de curieux sans budget qui te font perdre du temps."
+            title: "Papiers & Photos perdus",
+            desc: "Vos équipes terrain perdent du temps à remplir des rapports papier qui finissent souvent égarés."
         },
         {
             icon: <Angry className="w-6 h-6 text-red-500" />,
-            title: "Ads coûteuses",
-            desc: "Des coûts publicitaires qui explosent sans ROI clair ni retargeting précis."
+            title: "Double Saisie systématique",
+            desc: "Vos journées se terminent par 3 heures de saisie au bureau pour remettre au propre les notes de la journée."
         }
     ];
 
@@ -24,11 +24,11 @@ export function ProblemAgitation() {
         <Section id="problem">
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                        Le modèle "Site Vitrine" est <span className="text-red-500">cassé</span>.
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
+                        Votre organisation est <span className="text-red-500">freinée</span> par vos outils actuels.
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        Tu es expert dans ton domaine, mais ton site web ne reflète pas ta valeur. Il attend passivement que les visiteurs cliquent sur "Contact", ce qu'ils font de moins en moins.
+                        Vous êtes expert dans votre domaine, mais votre organisation repose encore sur des outils du siècle dernier. Chaque information perdue ou mal saisie grignote votre rentabilité et la motivation de vos équipes.
                     </p>
                     <div className="space-y-4">
                         {frustrations.map((item, idx) => (
@@ -46,15 +46,15 @@ export function ProblemAgitation() {
                 <div className="relative">
                     <div className="bg-muted p-8 rounded-2xl border border-border shadow-2xl relative z-10">
                         <div className="absolute -top-4 -right-4 bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white px-4 py-2 rounded-lg font-bold shadow-lg transform rotate-3">
-                            La Solution
+                            L'Application
                         </div>
                         <h3 className="text-xl font-bold mb-4 text-foreground">Imagine plutôt...</h3>
                         <ul className="space-y-4">
                             {[
-                                "Un quiz qui segmente automatiquement tes visiteurs",
-                                "Des prospects chauds qui prennent RDV eux-mêmes",
-                                "Un coût par lead réduit de 30 à 50%",
-                                "Une expérience client personnalisée dès le premier clic"
+                                "Une saisie mobile intuitive pour vos équipes terrain",
+                                "Un tableau de bord automatisé pour piloter votre marge",
+                                "Zéro perte d'information entre le chantier et le bureau",
+                                "Votre rentabilité calculée en temps réel sur chaque projet"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-foreground/80">
                                     <div className="h-6 w-6 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center flex-shrink-0">

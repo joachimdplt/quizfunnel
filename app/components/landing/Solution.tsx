@@ -1,10 +1,15 @@
 import { useEffect, useRef } from "react";
 import { Section } from "~/components/ui/Section";
 import { Button } from "~/components/ui/Button";
+import { BOOKING_URL } from "~/constants";
 
 export function Solution() {
     const headerRef = useRef<HTMLDivElement>(null);
     const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+    const handleCTA = () => {
+        window.open(BOOKING_URL, "_blank");
+    };
 
     useEffect(() => {
         const observerOptions = {
@@ -34,23 +39,23 @@ export function Solution() {
     const steps = [
         {
             step: "01",
-            title: "Appel de Cadrage Stratégique",
-            desc: "Nous analysons en profondeur ton business, ton offre et ta cible pour définir l'angle d'attaque précis."
+            title: "Expertise de Terrain",
+            desc: "On commence par une immersion totale dans votre quotidien pour comprendre comment vous travaillez réellement."
         },
         {
             step: "02",
-            title: "Profilage Avatar & Psychologie",
-            desc: "Recherche avancée pour modéliser ton client idéal et créer un ciblage chirurgical."
+            title: "Architecture Métier",
+            desc: "Conception d'une base de données solide et d'interfaces pensées pour être utilisées en gants ou sous la pluie."
         },
         {
             step: "03",
-            title: "Architecture & Déploiement",
-            desc: "Lancement de ta V1 sous 14 jours. Puis intégration CRM, e-mails de vente et livraison finale sous 21 jours."
+            title: "Déploiement MVP (21j)",
+            desc: "Mise en service d'une version de base pour valider l'adoption par vos équipes sur le terrain."
         },
         {
             step: "04",
-            title: "Optimisation Continue (90 Jours)",
-            desc: "Nous analysons les datas et itérons chaque semaine pour maximiser ton retour sur investissement."
+            title: "Optimisation & Scale",
+            desc: "Ajout de fonctionnalités avancées (devis auto, facturation, rappels) pour centraliser tout votre business."
         }
     ];
 
@@ -70,7 +75,7 @@ export function Solution() {
                     Comment ça marche ?
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                    Un processus rodé pour déployer ta machine à leads.
+                    Une méthode agile pour livrer votre cockpit de pilotage.
                 </p>
             </div>
 
@@ -108,9 +113,9 @@ export function Solution() {
                     size="lg"
                     variant="cta"
                     className="h-14 px-8 text-lg"
-                    onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={handleCTA}
                 >
-                    Je veux mon système d'acquisition
+                    Prendre rendez-vous
                 </Button>
             </div>
         </Section>

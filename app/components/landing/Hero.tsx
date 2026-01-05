@@ -39,45 +39,32 @@ export function Hero() {
                 {/* Headline */}
                 <h1 className="mt-20 text-4xl md:text-7xl font-bold tracking-tight text-foreground leading-tight">
                     <span className="block mb-2 md:mb-4 md:whitespace-nowrap">
-                        Je transforme ta landing {" "}
+                        Je crée l'app qui {" "}
                         <span className="whitespace-nowrap">
-                            en{" "}
+                            résout{" "}
                             <span className="relative inline-block mx-2">
                                 <span className="relative z-10 px-4 py-1 rounded-xl bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white rotate-[-2deg] inline-block shadow-lg shadow-purple-500/30">
-                                    Quiz
+                                    le problème n°1
                                 </span>
-                                {/* Decorative Question Mark */}
+                                {/* Decorative Dashboard Icon */}
                                 <svg className="absolute -bottom-3 -right-6 md:-top-8 md:-left-6 w-8 h-8 md:w-12 md:h-12 text-purple-400 bg-background rounded-lg p-1 shadow-sm rotate-[-15deg] z-20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C15.3137 2 18 4.68629 18 8C18 10.1646 16.7977 12.0838 15.0048 13.0973C14.1539 13.5783 13.6294 14.4752 13.6294 15.4545V16C13.6294 16.5523 13.1817 17 12.6294 17H11.3706C10.8183 17 10.3706 16.5523 10.3706 16V15.4545C10.3706 13.6289 11.3483 11.9571 12.9335 11.0609C13.9744 10.4724 14.6294 9.32426 14.6294 8C14.6294 6.54579 13.4542 5.37059 12 5.37059C10.5458 5.37059 9.37059 6.54579 9.37059 8C9.37059 8.55228 8.92287 9 8.37059 9H7.11176C6.55948 9 6.11176 8.55228 6.11176 8C6.11176 4.68629 8.68629 2 12 2ZM12 22C12.8284 22 13.5 21.3284 13.5 20.5C13.5 19.6716 12.8284 19 12 19C11.1716 19 10.5 19.6716 10.5 20.5C10.5 21.3284 11.1716 22 12 22Z" />
+                                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
                                 </svg>
                             </span>
                         </span>
                     </span>
                     <span className="block md:whitespace-nowrap">
-                        <span className="whitespace-nowrap">
-                            qui fait{" "}
-                            <span className="relative inline-block mx-2">
-                                <span className="relative z-10 px-4 py-1 rounded-xl bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white rotate-[1deg] inline-block shadow-lg shadow-purple-500/30">
-                                    Exploser
-                                </span>
-                                {/* Decorative Chart Icon */}
-                                <svg className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 w-8 h-8 md:w-12 md:h-12 text-purple-400 bg-background rounded-lg p-1 shadow-sm z-20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                                    <polyline points="17 6 23 6 23 12"></polyline>
-                                </svg>
-                            </span>
-                        </span>
-                        {" "}tes conversions
+                        de votre secteur
                     </span>
                 </h1>
 
-                <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-                    Qualifie et segmente automatiquement chaque prospect avec un Quiz Funnel sur-mesure.
+                <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl leading-relaxed">
+                    Fini les tableaux Excel, les papiers perdus et les doubles saisies. Pilotez votre chantier, vos équipes et votre rentabilité en temps réel avec une application sur mesure.
                 </p>
 
                 <div className="flex flex-col items-center gap-4 pt-4">
                     <Button size="lg" variant="cta" className="text-lg px-8" onClick={handleCTA}>
-                        Je veux mon système d'acquisition
+                        Prendre rendez-vous
                     </Button>
                     <p className="text-sm text-muted-foreground font-medium opacity-60">
                         Sans engagement — 100% gratuit
