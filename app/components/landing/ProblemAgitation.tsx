@@ -11,7 +11,7 @@ export function ProblemAgitation() {
         {
             icon: <Activity className="w-6 h-6 text-red-500" />,
             title: "Leads non qualifiés",
-            desc: "Votre calendrier se remplit de curieux sans budget qui vous font perdre du temps."
+            desc: "Ton calendrier se remplit de curieux sans budget qui te font perdre du temps."
         },
         {
             icon: <Angry className="w-6 h-6 text-red-500" />,
@@ -28,7 +28,7 @@ export function ProblemAgitation() {
                         Le modèle "Site Vitrine" est <span className="text-red-500">cassé</span>.
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        Vous êtes expert dans votre domaine, mais votre site web ne reflète pas votre valeur. Il attend passivement que les visiteurs cliquent sur "Contact", ce qu'ils font de moins en moins.
+                        Tu es expert dans ton domaine, mais ton site web ne reflète pas ta valeur. Il attend passivement que les visiteurs cliquent sur "Contact", ce qu'ils font de moins en moins.
                     </p>
                     <div className="space-y-4">
                         {frustrations.map((item, idx) => (
@@ -48,10 +48,10 @@ export function ProblemAgitation() {
                         <div className="absolute -top-4 -right-4 bg-gradient-to-r from-[#9C51FF] to-[#6F00FF] text-white px-4 py-2 rounded-lg font-bold shadow-lg transform rotate-3">
                             La Solution
                         </div>
-                        <h3 className="text-xl font-bold mb-4 text-foreground">Imaginez plutôt...</h3>
+                        <h3 className="text-xl font-bold mb-4 text-foreground">Imagine plutôt...</h3>
                         <ul className="space-y-4">
                             {[
-                                "Un quiz qui segmente automatiquement vos visiteurs",
+                                "Un quiz qui segmente automatiquement tes visiteurs",
                                 "Des prospects chauds qui prennent RDV eux-mêmes",
                                 "Un coût par lead réduit de 30 à 50%",
                                 "Une expérience client personnalisée dès le premier clic"

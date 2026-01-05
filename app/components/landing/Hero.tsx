@@ -72,7 +72,7 @@ export function Hero() {
                 </h1>
 
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-                    Qualifiez et segmentez automatiquement chaque prospect avec un Quiz Funnel sur-mesure.
+                    Qualifie et segmente automatiquement chaque prospect avec un Quiz Funnel sur-mesure.
                 </p>
 
                 <div className="flex flex-col items-center gap-4 pt-4">

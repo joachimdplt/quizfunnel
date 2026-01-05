@@ -70,7 +70,7 @@ export function Navigation() {
                                     className="rounded-full px-8 text-base shadow-lg"
                                     onClick={handleCTA}
                                 >
-                                    Réservez
+                                    Réserver
                                 </Button>
                             </div>
                         </div>

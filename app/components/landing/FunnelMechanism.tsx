@@ -10,7 +10,7 @@ export function FunnelMechanism() {
                         Qu'est-ce qu'un <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C51FF] to-[#6F00FF]">Quiz Funnel</span> ?
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Un formulaire qui permet de segmenter vos prospects à travers vos critères.
+                        Un formulaire qui permet de segmenter tes prospects à travers tes critères.
                     </p>
                 </div>
 
@@ -26,11 +26,11 @@ export function FunnelMechanism() {
                             </div>
                             <h3 className="text-2xl font-bold text-foreground mb-4">Diagnostic</h3>
                             <p className="text-muted-foreground leading-relaxed mb-6">
-                                Au lieu de vendre directement, vous posez des questions pertinentes pour comprendre le besoin réel de votre prospect.
+                                Au lieu de vendre directement, tu poses des questions pertinentes pour comprendre le besoin réel de ton prospect.
                             </p>
                             <div className="bg-background/50 rounded-2xl p-4 border border-border">
                                 <p className="text-xs text-muted-foreground uppercase font-bold mb-2">Exemple</p>
-                                <p className="text-sm text-foreground/80 italic">"Quel est votre plus grand défi actuel avec votre trafic ?"</p>
+                                <p className="text-sm text-foreground/80 italic">"Quel est ton plus grand défi actuel avec ton trafic ?"</p>
                             </div>
                         </div>
                         <ArrowRight className="absolute -right-6 top-1/2 -translate-y-1/2 text-border hidden md:block w-8 h-8" />
@@ -47,7 +47,7 @@ export function FunnelMechanism() {
                             </div>
                             <h3 className="text-2xl font-bold text-foreground mb-4">Capture</h3>
                             <p className="text-muted-foreground leading-relaxed mb-6">
-                                En échange du diagnostic personnalisé, le prospect vous donne ses coordonnées qualifiées.
+                                En échange du diagnostic personnalisé, le prospect te donne ses coordonnées qualifiées.
                             </p>
                             <div className="bg-background/50 rounded-2xl p-4 border border-border">
                                 <p className="text-xs text-muted-foreground uppercase font-bold mb-2">Résultat</p>
@@ -68,7 +68,7 @@ export function FunnelMechanism() {
                             </div>
                             <h3 className="text-2xl font-bold text-foreground mb-4">Conversion</h3>
                             <p className="text-muted-foreground leading-relaxed mb-6">
-                                Vous redirigez le prospect vers l'offre exacte qui correspond à son besoin (ou un appel commercial préparé).
+                                Tu rediriges le prospect vers l'offre exacte qui correspond à son besoin (ou un appel commercial préparé).
                             </p>
                             <div className="bg-background/50 rounded-2xl p-4 border border-border">
                                 <p className="text-xs text-muted-foreground uppercase font-bold mb-2">Impact</p>

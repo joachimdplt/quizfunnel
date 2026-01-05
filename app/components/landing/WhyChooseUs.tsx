@@ -12,7 +12,7 @@ export function WhyChooseUs() {
         <Section className="py-24">
             <div className="text-center max-w-4xl mx-auto mb-16 px-4">
                 <h2 className="text-4xl md:text-7xl font-bold text-foreground mb-8 tracking-tight">
-                    5 raisons de me choisir pour <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">faire exploser vos Conversions</span>
+                    5 raisons de me choisir pour <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">faire exploser tes Conversions</span>
                 </h2>
                 <Button
                     variant="cta"
@@ -31,7 +31,7 @@ export function WhyChooseUs() {
                     </div>
                     <div>
                         <h3 className="text-xl font-bold text-foreground mb-2">Recherche Avatar Avancée</h3>
-                        <p className="text-muted-foreground text-sm">Analyse psychologique profonde pour cibler parfaitement votre audience.</p>
+                        <p className="text-muted-foreground text-sm">Analyse psychologique profonde pour cibler parfaitement ton audience.</p>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@ export function WhyChooseUs() {
                     </div>
                     <div>
                         <h3 className="text-xl font-bold text-foreground mb-2">Livraison V1 en 14 Jours</h3>
-                        <p className="text-muted-foreground text-sm">Votre système est opérationnel en 2 semaines, livraison finale complète sous 21 jours.</p>
+                        <p className="text-muted-foreground text-sm">Ton système est opérationnel en 2 semaines, livraison finale complète sous 21 jours.</p>
                     </div>
                 </div>
 
@@ -75,7 +75,7 @@ export function WhyChooseUs() {
                         <div>
                             <h3 className="text-2xl font-bold text-white mb-2">Gestion de A à Z</h3>
                             <p className="text-purple-100 text-sm">
-                                Création complète du Quiz Funnel et des séquences emails. On s'occupe de toute la technique et du copywriting.
+                                Création complète du Quiz Funnel et des séquences emails. Je m'occupe de toute la technique et du copywriting.
                             </p>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ export function WhyChooseUs() {
                     </div>
                     <div>
                         <h3 className="text-xl font-bold text-foreground mb-2">Fiabilité & Sécurité</h3>
-                        <p className="text-muted-foreground text-sm">Une infrastructure robuste et des données sécurisées pour votre business.</p>
+                        <p className="text-muted-foreground text-sm">Une infrastructure robuste et des données sécurisées pour ton business.</p>
                     </div>
                 </div>
 

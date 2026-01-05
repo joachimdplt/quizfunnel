@@ -56,15 +56,15 @@ export function Footer() {
                 <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-20 md:mb-32">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-muted/50 backdrop-blur-sm text-xs font-medium text-muted-foreground mb-8">
                         <Rocket className="w-3 h-3 text-foreground" />
-                        VOTRE LANDING PAGE EST MUETTE ?
+                        TA LANDING PAGE EST MUETTE ?
                     </div>
 
                     <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tight text-foreground">
-                        Générez des leads ultra-qualifiés avec un <span className="text-primary">Quiz Funnel Intelligent</span>
+                        Génère des leads ultra-qualifiés avec un <span className="text-primary">Quiz Funnel Intelligent</span>
                     </h2>
 
                     <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                        Votre V1 livrée sous <span className="text-foreground font-bold">14 jours</span>.
+                        Ta V1 livrée sous <span className="text-foreground font-bold">14 jours</span>.
                         <br />
                         Livraison finale optimisée sous <span className="text-foreground font-bold">21 jours</span>.
                     </p>

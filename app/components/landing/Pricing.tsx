@@ -12,10 +12,10 @@ export function Pricing() {
         <Section className="py-24" id="pricing">
             <div className="text-center max-w-4xl mx-auto mb-16 px-4">
                 <h2 className="text-4xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
-                    Prêt à Exploser votre <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Taux de Conversion</span> ?
+                    Prêt à Exploser ton <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Taux de Conversion</span> ?
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                    Choisissez la solution adaptée à votre stade de croissance.
+                    Choisis la solution adaptée à ton stade de croissance.
                 </p>
             </div>
 
@@ -124,7 +124,7 @@ export function Pricing() {
                 <div className="bg-muted/40 rounded-3xl p-8 border border-border text-center">
                     <h3 className="text-xl font-bold text-foreground mb-4">Besoin d'aide pour choisir ?</h3>
                     <p className="text-muted-foreground mb-6">
-                        Lors de notre appel, nous définirons ensemble la meilleure infrastructure pour vos objectifs.
+                        Lors de notre appel, nous définirons ensemble la meilleure infrastructure pour tes objectifs.
                     </p>
                     <Button
                         variant="ghost"

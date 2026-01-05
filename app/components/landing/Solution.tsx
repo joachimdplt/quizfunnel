@@ -35,22 +35,22 @@ export function Solution() {
         {
             step: "01",
             title: "Appel de Cadrage Stratégique",
-            desc: "Nous analysons en profondeur votre business, votre offre et votre cible pour définir l'angle d'attaque précis."
+            desc: "Nous analysons en profondeur ton business, ton offre et ta cible pour définir l'angle d'attaque précis."
         },
         {
             step: "02",
             title: "Profilage Avatar & Psychologie",
-            desc: "Recherche avancée pour modéliser votre client idéal et créer un ciblage chirurgical."
+            desc: "Recherche avancée pour modéliser ton client idéal et créer un ciblage chirurgical."
         },
         {
             step: "03",
             title: "Architecture & Déploiement",
-            desc: "Lancement de votre V1 sous 14 jours. Puis intégration CRM, e-mails de vente et livraison finale sous 21 jours."
+            desc: "Lancement de ta V1 sous 14 jours. Puis intégration CRM, e-mails de vente et livraison finale sous 21 jours."
         },
         {
             step: "04",
             title: "Optimisation Continue (90 Jours)",
-            desc: "Nous analysons les datas et itérons chaque semaine pour maximiser votre retour sur investissement."
+            desc: "Nous analysons les datas et itérons chaque semaine pour maximiser ton retour sur investissement."
         }
     ];
 
@@ -70,7 +70,7 @@ export function Solution() {
                     Comment ça marche ?
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                    Un processus rodé pour déployer votre machine à leads.
+                    Un processus rodé pour déployer ta machine à leads.
                 </p>
             </div>
 

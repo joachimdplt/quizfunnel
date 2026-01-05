@@ -11,24 +11,24 @@ export function FAQ() {
 
     const faqs = [
         {
-            q: "Quelle est votre garantie de satisfaction ?",
-            a: "Nous sommes confiants dans notre méthode. Si les résultats ne sont pas au rendez-vous après 90 jours d'optimisation (génération de leads qualifiés ou rentabilité), nous vous remboursons intégralement. C'est notre engagement envers votre succès."
+            q: "Quelle est ta garantie de satisfaction ?",
+            a: "Je suis confiant dans ma méthode. Si les résultats ne sont pas au rendez-vous après 90 jours d'optimisation (génération de leads qualifiés ou rentabilité), je te rembourse intégralement. C'est mon engagement envers ton succès."
         },
         {
             q: "Que se passe-t-il à la fin des 3 mois ?",
-            a: "Après la phase initiale de 3 mois, nous analysons les performances ensemble. Vous pouvez choisir de continuer l'accompagnement pour optimiser davantage le funnel, de prendre le relais en interne, ou d'arrêter sans frais supplémentaires."
+            a: "Après la phase initiale de 3 mois, nous analysons les performances ensemble. Tu peux choisir de continuer l'accompagnement pour optimiser davantage le funnel, de prendre le relais en interne, ou d'arrêter sans frais supplémentaires."
         },
         {
             q: "Pour quels secteurs créez-vous des Quiz Funnels ?",
-            a: "Nous travaillons principalement avec des entreprises de services (B2B/B2C), des infopreneurs, des coachs et des agences qui ont besoin de qualifier leurs prospects avant un appel de vente."
+            a: "Je travaille principalement avec des entreprises de services (B2B/B2C), des infopreneurs, des coachs et des agences qui ont besoin de qualifier leurs prospects avant un appel de vente."
         },
         {
             q: "À quoi sert l'appel ?",
-            a: "L'appel de diagnostic nous permet de comprendre votre business, vos objectifs et de vérifier si un Quiz Funnel est la meilleure solution pour vous. C'est une session de conseil stratégique, pas une simple démo."
+            a: "L'appel de diagnostic nous permet de comprendre ton business, tes objectifs et de vérifier si un Quiz Funnel est la meilleure solution pour toi. C'est une session de conseil stratégique, pas une simple démo."
         },
         {
-            q: "Quels sont vos délais de livraisons ?",
-            a: "Votre V1 (stratégie, quiz et landing page) est livrée sous 14 jours ouvrés. La version finale optimisée avec intégrations CRM complètes est livrée sous 21 jours."
+            q: "Quels sont tes délais de livraisons ?",
+            a: "Ta V1 (stratégie, quiz et landing page) est livrée sous 14 jours ouvrés. La version finale optimisée avec intégrations CRM complètes est livrée sous 21 jours."
         }
     ];
 
