@@ -2,8 +2,13 @@ import { useState } from "react";
 import { Section } from "~/components/ui/Section";
 import { Button } from "~/components/ui/Button";
 import { Plus, Minus } from "lucide-react";
+import { BOOKING_URL } from "~/constants";
 
 export function FAQ() {
+    const handleCTA = () => {
+        window.open(BOOKING_URL, "_blank");
+    };
+
     const faqs = [
         {
             q: "Quelle est votre garantie de satisfaction ?",
@@ -45,7 +50,7 @@ export function FAQ() {
                         variant="cta"
                         size="lg"
                         className="rounded-full px-10 text-lg shadow-2xl"
-                        onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={handleCTA}
                     >
                         Je veux mon système d'acquisition
                     </Button>

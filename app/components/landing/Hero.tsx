@@ -1,11 +1,17 @@
 import { Button } from "~/components/ui/Button";
 import { Section } from "~/components/ui/Section";
+import { BOOKING_URL } from "~/constants";
 
 export function Hero() {
+    const handleCTA = () => {
+        window.open(BOOKING_URL, "_blank");
+    };
+
     return (
         <Section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-48" id="hero">
             <div className="flex flex-col items-center text-center max-w-5xl mx-auto space-y-10">
                 {/* Social Proof - Moved to top */}
+                {/*
                 <div className="flex flex-col items-center space-y-3">
                     <div className="flex items-center justify-center -space-x-3">
                         {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -28,10 +34,10 @@ export function Hero() {
                             ))}
                         </div>
                     </div>
-                </div>
+                </div>*/}
 
                 {/* Headline */}
-                <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-foreground leading-tight">
+                <h1 className="mt-20 text-4xl md:text-7xl font-bold tracking-tight text-foreground leading-tight">
                     <span className="block mb-2 md:mb-4 md:whitespace-nowrap">
                         Je transforme ta landing {" "}
                         <span className="whitespace-nowrap">
@@ -66,11 +72,11 @@ export function Hero() {
                 </h1>
 
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-                    Qualifiez, diagnostiquez et convertissez automatiquement chaque prospect avec un Quiz Funnel sur-mesure.
+                    Qualifiez et segmentez automatiquement chaque prospect avec un Quiz Funnel sur-mesure.
                 </p>
 
                 <div className="flex flex-col items-center gap-4 pt-4">
-                    <Button size="lg" variant="cta" className="text-lg px-8" onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}>
+                    <Button size="lg" variant="cta" className="text-lg px-8" onClick={handleCTA}>
                         Je veux mon système d'acquisition
                     </Button>
                     <p className="text-sm text-muted-foreground font-medium opacity-60">

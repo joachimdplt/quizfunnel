@@ -10,7 +10,7 @@ export function FunnelMechanism() {
                         Qu'est-ce qu'un <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C51FF] to-[#6F00FF]">Quiz Funnel</span> ?
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Une machine à convertir qui transforme des inconnus en clients fidèles en 3 étapes simples.
+                        Un formulaire qui permet de segmenter vos prospects à travers vos critères.
                     </p>
                 </div>
 
@@ -72,7 +72,7 @@ export function FunnelMechanism() {
                             </p>
                             <div className="bg-background/50 rounded-2xl p-4 border border-border">
                                 <p className="text-xs text-muted-foreground uppercase font-bold mb-2">Impact</p>
-                                <p className="text-sm text-foreground/80 italic">Des appels avec des prospects éduqués et prêts à acheter.</p>
+                                <p className="text-sm text-foreground/80 italic">Des appels avec des prospects éduqués et prêts à passer à l'action.</p>
                             </div>
                         </div>
                     </div>

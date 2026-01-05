@@ -1,8 +1,13 @@
 import { Section } from "~/components/ui/Section";
 import { Button } from "~/components/ui/Button";
 import { Check } from "lucide-react";
+import { BOOKING_URL } from "~/constants";
 
 export function Pricing() {
+    const handleCTA = () => {
+        window.open(BOOKING_URL, "_blank");
+    };
+
     return (
         <Section className="py-24" id="pricing">
             <div className="text-center max-w-4xl mx-auto mb-16 px-4">
@@ -26,7 +31,7 @@ export function Pricing() {
                         <Button
                             variant="outline"
                             className="w-full justify-center border-border text-foreground hover:bg-muted"
-                            onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                            onClick={handleCTA}
                         >
                             Je veux mon système d'acquisition
                         </Button>
@@ -62,12 +67,12 @@ export function Pricing() {
                 {/* Offer 2: Niveau Premium */}
                 <div className="bg-muted p-8 rounded-3xl border border-border dark:border-purple-500/30 shadow-2xl hover:border-primary/50 dark:hover:border-purple-500/60 hover:shadow-primary/5 dark:hover:shadow-purple-500/10 transition-all flex flex-col relative overflow-hidden group">
                     {/* Badge */}
-                    <div className="absolute top-0 right-0 bg-gradient-to-r  dark:from-purple-600 dark:to-blue-600 text-white text-xs font-bold px-4 py-2 rounded-bl-xl shadow-lg z-10">
+                    <div className="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-purple-600 dark:to-blue-600 text-white text-xs font-bold px-4 py-2 rounded-bl-xl shadow-lg z-10">
                         Recommandé
                     </div>
 
                     {/* Background Gradient */}
-                    <div className="absolute inset-0 dark:bg-gradient-to-br dark:to-transparent pointer-events-none"></div>
+                    <div className="absolute inset-0 r dark:from-purple-900/30 dark:to-transparent pointer-events-none"></div>
 
                     <div className="mb-8 relative z-10">
                         <div className="text-primary dark:text-purple-500 font-bold mb-2 text-sm uppercase tracking-wider">Niveau Premium</div>
@@ -78,7 +83,7 @@ export function Pricing() {
                         <Button
                             variant="cta"
                             className="w-full justify-center shadow-xl"
-                            onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                            onClick={handleCTA}
                         >
                             Je veux mon système d'acquisition
                         </Button>
@@ -124,7 +129,7 @@ export function Pricing() {
                     <Button
                         variant="ghost"
                         className="text-muted-foreground hover:text-foreground"
-                        onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={handleCTA}
                     >
                         Je veux mon système d'acquisition
                     </Button>

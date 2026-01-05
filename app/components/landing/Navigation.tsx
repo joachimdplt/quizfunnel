@@ -2,9 +2,15 @@ import { useState, useEffect } from "react";
 import { Button } from "~/components/ui/Button";
 import { ThemeToggle } from "~/components/ui/ThemeToggle";
 import { X, Menu as MenuIcon, ArrowRight } from "lucide-react";
+import { BOOKING_URL } from "~/constants";
 
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
+
+    const handleCTA = () => {
+        window.open(BOOKING_URL, "_blank");
+        setIsOpen(false);
+    };
 
     const scrollTo = (id: string) => {
         const element = document.getElementById(id);
@@ -62,7 +68,7 @@ export function Navigation() {
                                     variant="cta"
                                     size="md"
                                     className="rounded-full px-8 text-base shadow-lg"
-                                    onClick={() => scrollTo('footer')}
+                                    onClick={handleCTA}
                                 >
                                     Réservez
                                 </Button>
@@ -111,7 +117,7 @@ export function Navigation() {
                                     variant="cta"
                                     size="sm"
                                     className="rounded-full px-8 py-5 text-sm shadow-xl"
-                                    onClick={() => scrollTo('footer')}
+                                    onClick={handleCTA}
                                 >
                                     Je veux mon système
                                 </Button>

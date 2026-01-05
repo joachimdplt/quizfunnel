@@ -1,8 +1,13 @@
 import { Section } from "~/components/ui/Section";
 import { Button } from "~/components/ui/Button";
 import { UserSearch, Zap, ShieldCheck, ChartPie, Mail } from "lucide-react";
+import { BOOKING_URL } from "~/constants";
 
 export function WhyChooseUs() {
+    const handleCTA = () => {
+        window.open(BOOKING_URL, "_blank");
+    };
+
     return (
         <Section className="py-24">
             <div className="text-center max-w-4xl mx-auto mb-16 px-4">
@@ -12,7 +17,7 @@ export function WhyChooseUs() {
                 <Button
                     variant="cta"
                     size="lg"
-                    onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={handleCTA}
                 >
                     Je veux mon système d'acquisition
                 </Button>

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { Section } from "~/components/ui/Section";
 import { Button } from "~/components/ui/Button";
 import { ArrowRight, Rocket, Linkedin } from "lucide-react";
+import { BOOKING_URL } from "~/constants";
 
 export function Footer() {
     const [formData, setFormData] = useState({
@@ -44,6 +45,10 @@ export function Footer() {
         }
     };
 
+    const handleCTA = () => {
+        window.open(BOOKING_URL, "_blank");
+    };
+
     return (
         <Section id="footer" className="bg-transparent py-20 text-foreground overflow-hidden relative">
             <div className="relative z-10 container mx-auto px-4">
@@ -68,7 +73,7 @@ export function Footer() {
                         size="lg"
                         variant="cta"
                         className="shadow-xl"
-                        onClick={() => window.location.href = '#'}
+                        onClick={handleCTA}
                     >
                         Je veux mon système d'acquisition
                     </Button>
