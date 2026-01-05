@@ -49,7 +49,7 @@ export function Navigation() {
                     </div>
 
                     <div className="flex items-center gap-6">
-                        <div className="relative">
+                        <div className="relative hidden md:block">
                             {/* Speech Bubble below the button */}
                             <div className="absolute top-[calc(100%+12px)] right-0 bg-white text-slate-950 text-[11px] font-black px-4 py-2 rounded-2xl whitespace-nowrap shadow-2xl pointer-events-none z-20">
                                 👋 plus qu'un créneau dispo pour février!
