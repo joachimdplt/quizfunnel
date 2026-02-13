@@ -346,7 +346,10 @@
     while (el && el !== document) {
       var tag = el.tagName;
       if (tag === "A" || tag === "BUTTON" || (el.getAttribute && el.getAttribute("role") === "button")) {
-        var text = (el.innerText || "").trim().substring(0, 100);
+        var text = (el.innerText || "").trim().substring(0, 100)
+          || el.getAttribute("aria-label")
+          || el.getAttribute("title")
+          || "";
         var props = { tag: tag.toLowerCase(), text: text };
 
         if (tag === "A") {
