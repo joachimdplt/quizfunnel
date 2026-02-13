@@ -331,7 +331,42 @@
 
 
   // ┌─────────────────────────────────────────────┐
-  // │  BLOC 11 — API PUBLIQUE                     │
+  // │  BLOC 11 — AUTO-TRACKING DES CLICS          │
+  // │                                             │
+  // │  Capture automatiquement les clics sur les  │
+  // │  liens <a> et boutons <button>.             │
+  // └─────────────────────────────────────────────┘
+
+  document.addEventListener("click", function (e) {
+    var el = e.target;
+
+    // Remonter le DOM pour trouver le lien ou bouton cliqué
+    while (el && el !== document) {
+      var tag = el.tagName;
+      if (tag === "A" || tag === "BUTTON" || (el.getAttribute && el.getAttribute("role") === "button")) {
+        var text = (el.innerText || "").trim().substring(0, 100);
+        var props = { tag: tag.toLowerCase(), text: text };
+
+        if (tag === "A") {
+          props.href = el.getAttribute("href") || "";
+          props.external = el.hostname !== window.location.hostname;
+        }
+
+        if (el.id) props.id = el.id;
+        if (el.className && typeof el.className === "string") {
+          props.class = el.className.split(" ").slice(0, 3).join(" ");
+        }
+
+        send("e", { name: "__click", props: props });
+        return;
+      }
+      el = el.parentElement;
+    }
+  }, true);
+
+
+  // ┌─────────────────────────────────────────────┐
+  // │  BLOC 12 — API PUBLIQUE                     │
   // │                                             │
   // │  window.analytics = { track, revenue,       │
   // │  identify, funnel }                         │
