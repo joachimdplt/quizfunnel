@@ -1,5 +1,5 @@
 // ══════════════════════════════════════════════════════════════
-// sdk.js — Script analytics universel v1.1
+// sdk.js — Script analytics universel v1.2
 //
 // INSTALLATION (1 ligne dans le HTML de n'importe quel site) :
 // <script defer data-site="SITE_ID" src="https://cdn.tondomaine.com/sdk.js"></script>
@@ -83,6 +83,8 @@
       first_utm_source: firstUtms.source || null,
       first_utm_medium: firstUtms.medium || null,
       first_utm_campaign: firstUtms.campaign || null,
+      first_utm_term: firstUtms.term || null,
+      first_utm_content: firstUtms.content || null,
 
       // UTM params courants
       utm_source: params.get("utm_source"),
