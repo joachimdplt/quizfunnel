@@ -49,6 +49,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 {children}
                 <ScrollRestoration />
                 <Scripts />
+                <script
+                    defer
+                    data-site="quiz_prod"
+                    src="/sdk.js"
+                />
             </body>
         </html>
     );
