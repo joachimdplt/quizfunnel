@@ -53,7 +53,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     defer
                     data-site="quiz_prod"
                     src="/sdk.js"
-                />
+                >{""}</script>
             </body>
         </html>
     );
