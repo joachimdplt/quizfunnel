@@ -49,8 +49,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 {children}
                 <ScrollRestoration />
                 <Scripts />
-                <script dangerouslySetInnerHTML={{ __html: `window.__analytics_config={site:"quiz_prod"};` }} />
-                <script defer src="/sdk.js">{""}</script>
+                <script dangerouslySetInnerHTML={{ __html: `window.__analytics_config={site:"quiz_prod"};var s=document.createElement("script");s.defer=true;s.src="/sdk.js";document.head.appendChild(s);` }} />
             </body>
         </html>
     );
