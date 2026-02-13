@@ -49,11 +49,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 {children}
                 <ScrollRestoration />
                 <Scripts />
-                <script
-                    defer
-                    data-site="quiz_prod"
-                    src="/sdk.js"
-                >{""}</script>
+                <script dangerouslySetInnerHTML={{ __html: `window.__analytics_config={site:"quiz_prod"};` }} />
+                <script defer src="/sdk.js">{""}</script>
             </body>
         </html>
     );

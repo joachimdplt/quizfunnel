@@ -13,15 +13,18 @@
   // │  BLOC 1 — LECTURE DE LA CONFIGURATION       │
   // └─────────────────────────────────────────────┘
 
+  // Mode 1 : attributs HTML (<script data-site="..." src="sdk.js">)
+  // Mode 2 : config globale (window.__analytics = { site: "..." })
+  // Le mode 2 permet l'intégration dans React, Next.js, Remix, etc.
   var script = document.currentScript;
-  if (!script) return;
+  var cfg = window.__analytics_config || {};
 
-  var siteId = script.getAttribute("data-site");
+  var siteId = (script && script.getAttribute("data-site")) || cfg.site;
   if (!siteId) return;
 
-  var endpoint = script.getAttribute("data-api") || "https://api.tondomaine.com/api/event";
-  var spaEnabled = script.getAttribute("data-spa") !== "false";
-  var vitalsEnabled = script.getAttribute("data-no-vitals") !== "true";
+  var endpoint = (script && script.getAttribute("data-api")) || cfg.api || "https://api.tondomaine.com/api/event";
+  var spaEnabled = (script ? script.getAttribute("data-spa") !== "false" : cfg.spa !== false);
+  var vitalsEnabled = (script ? script.getAttribute("data-no-vitals") !== "true" : cfg.vitals !== false);
 
 
   // ┌─────────────────────────────────────────────┐
